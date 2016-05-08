@@ -1,2 +1,31 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <h1>Home</h1>
+
+  <% if current_user.try(:admin?) %>
+    <h2>Users</h2>
+
+    <%= link_to('All Users', :action => "index") %>
+    <%= link_to('Users awaiting approval', :action => "index", :approved => "false") %>
+
+    <table class="form-table">
+      <thead>
+        <tr>
+          <th>email</th>
+          <th>approved</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= user.approved %></td>
+
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+<div>

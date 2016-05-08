@@ -17,6 +17,9 @@ gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'fog', '~> 1.38'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 
+gem 'autoprefixer-rails', '~> 6.3', '>= 6.3.6'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 # Use Redis adapter to run Action Cable in production

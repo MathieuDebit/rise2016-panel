@@ -1,0 +1,28 @@
+<div class="header">
+  <p class="header-title">
+    RISE 2016 Panel
+  </p>
+
+  <% if user_signed_in? %>
+    <div class="header-menu">
+      <ul>
+        <li><%= link_to('Home', root_path) %></li>
+        <% if current_user.try(:admin?) %>
+          <li><%= link_to('Users', :action => "index") %></li>
+        <% end %>
+        <li><%= link_to('Participants', participants_path) %></li>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="header-user">
+    <ul>
+      <% if user_signed_in? %>
+        <li class="header-user-welcome">wassup <%= current_user.email %></li>
+        <li class="header-user-link"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+      <% else %>
+        <li class="header-user-link"><%= link_to('Login', new_user_session_path) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

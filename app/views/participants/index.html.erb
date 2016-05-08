@@ -1,33 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Participants</h1>
+<div class="container">
+  <h2 class="partitipants-title">Participants</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Firstname</th>
-      <th>Lastname</th>
-      <th>Birthdate</th>
-      <th>Nationality</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <%= link_to 'New Participant', new_participant_path %>
 
-  <tbody>
-    <% @participants.each do |participant| %>
+  <table class="form-table">
+    <thead>
       <tr>
-        <td><%= participant.firstname %></td>
-        <td><%= participant.lastname %></td>
-        <td><%= participant.birthdate %></td>
-        <td><%= participant.nationality %></td>
-        <td><%= link_to 'Show', participant %></td>
-        <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
-        <td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Birthdate</th>
+        <th>Nationality</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Participant', new_participant_path %>
+    <tbody>
+      <% @participants.each do |participant| %>
+        <tr>
+          <td><%= participant.firstname %></td>
+          <td><%= participant.lastname %></td>
+          <td><%= participant.birthdate %></td>
+          <td><%= participant.nationality %></td>
+          <td><%= link_to 'Show', participant %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<div class="container"><div class="container">
