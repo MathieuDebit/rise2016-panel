@@ -12,6 +12,10 @@ gem 'turbolinks', '~> 5.x'
 gem 'jbuilder', '~> 2.0'
 
 gem 'devise', '~> 4.1'
+gem 'carrierwave', '~> 0.11.2'
+gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+gem 'fog', '~> 1.38'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

@@ -20,5 +20,12 @@
   <%= @participant.nationality %>
 </p>
 
+<p>
+  <% if @participant.avatar? %>
+    <strong>Avatar:</strong>
+    <%= image_tag @participant.avatar.thumb.url %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_participant_path(@participant) %> |
 <%= link_to 'Back', participants_path %>
